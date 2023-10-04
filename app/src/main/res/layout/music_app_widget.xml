@@ -1,0 +1,63 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.MusicPlayer.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MusicPlayer.AppWidgetContainer">
+
+    <ImageView
+        android:id="@+id/widget_song_cover"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/songcover"
+        android:maxHeight="500dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_music" />
+
+    <LinearLayout
+        android:id="@+id/widget_player_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/widget_song_cover"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:gravity="center">
+
+
+
+        <ImageButton
+            android:id="@+id/widget_skip_previous"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight=".9"
+            android:background="@color/design_default_color_primary"
+            android:src="@drawable/skip_previous" />
+
+        <ImageButton
+            android:id="@+id/widget_play_pause"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_weight="1.5"
+            android:layout_margin="8dp"
+            android:background="@color/design_default_color_primary"
+            android:src="@drawable/play" />
+
+        <ImageButton
+            android:id="@+id/widget_skip_next"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_weight=".9"
+            android:background="@color/design_default_color_primary"
+            android:src="@drawable/skip_next" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
